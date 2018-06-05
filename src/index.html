@@ -7,11 +7,43 @@
 </head>
 
 <script type="text/javascript">
-    console.log(2222)
     window.onload = function() {
         var engine = new Engine();
-        console.log(engine)
-        engine.init('sssss');
+        let data = [
+            {
+                type: 1,
+                val: "1111",
+                val_type: 1,
+                style: {
+                    width: '100'
+                }
+            },
+            {
+                type: 2,
+                val: "2222",
+                val_type: 1,
+                style: {
+                    width: '100'
+                }
+            },
+            {
+                type: 3,
+                val: "3333",
+                val_type: 1,
+                style: {
+                    width: '100'
+                }
+            },
+            {
+                type: 4,
+                val: "4444",
+                val_type: 1,
+                style: {
+                    width: '100'
+                }
+            }
+        ]
+        engine.init(data);
     }
 </script>
 <body></body>
