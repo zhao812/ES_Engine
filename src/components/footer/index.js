@@ -5,4 +5,8 @@ export default class ES_Footer extends ES_Base {
         super(data)
         this.type = 2
     }
+
+    init() {
+        super.init();
+    }
 }

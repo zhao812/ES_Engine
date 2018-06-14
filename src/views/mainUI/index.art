@@ -1,0 +1,4 @@
+<div class="device-editor-container">
+    <div class="device-main"></div>
+    <div class="editor-main"></div>
+</div>

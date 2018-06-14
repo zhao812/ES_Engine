@@ -10,9 +10,7 @@ const path = require("path"),
 // AppCachePlugin = require('appcache-webpack-plugin');
 
 const PATHS = {
-    libsPath: path.resolve(process.cwd(), "./node_modules"),
-    componentsPath: path.resolve(process.cwd(), "./src") + "/components/",
-    basePath: path.resolve(process.cwd(), "./src/") + "/"
+    plungsPath: path.resolve(process.cwd(), "./src") + "/plungs/"
 }
 // let buildPath = "/build",env="development";
 
@@ -50,13 +48,17 @@ const CONFIG = {
         }
     },
     "alias": {
+        "$$": PATHS.plungsPath + "zepto/zepto.js"
     }
 }
 
 const getBaseConfig = (env) => {
     return {
         entry: {
-            app: "./src/index.js"
+            app: "./src/index.js",
+            vendor: [
+                '$'
+            ]
         },
         output: CONFIG[env].output,
         resolve: {
@@ -91,46 +93,20 @@ const getLoaders = (env) => {
                         }
                     }
                 ]
-            }, {
-                test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: [
-                        {
-                            loader: "css-loader" + sourceMap,
-                            options: {
-                                minimize: true //css压缩
-                            }
-                        }, {
-                            loader: "postcss-loader"
-                        }, {
-                            loader: "px2rem-loader?remUnit=37.5&baseDpr=1"
-                        }, {
-                            loader: "sass-loader" + sourceMap
-                        }
-                    ]
-                })
-            }, {
-                test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: [
-                        {
-                            loader: "css-loader",
-                            options: {
-                                minimize: true //css压缩
-                            }
-                        }, {
-                            loader: "postcss-loader"
-                        }, {
-                            loader: "px2rem-loader?remUnit=37.5&baseDpr=1"
-                        }
-                    ]
-                })
-            }, {
+            }, 
+            
+            //css less
+            {
+                test: /\.(scss|css|less)$/,
+                use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader'],
+            },
+
+            {
                 test: /\.art$/,
                 loader: "art-template-loader"
-            }, {
+            }, 
+            
+            {
                 test: /\.(png|jpg)$/,
                 loader: 'url-loader?limit=2000&name=images/[hash:8].[name].[ext]'
             }

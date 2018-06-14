@@ -1,0 +1,54 @@
+<div class="textEdotor-container">
+    <header>文字属性</header>
+    <div class="content">
+        <div class="edit-item">
+            <span class="title">名称</span>
+            <input class="nameInput" type="text" value="{{#name}}" placeholder="元件名称" />
+        </div>
+
+        <div class="edit-item">
+            <span class="title">内容</span>
+            <select>
+                <option>文本</option>
+                <option>数据</option>
+            </select>
+        </div>
+
+        <div class="edit-item">
+            <span class="title"></span>
+            <input class="textInput" type="text" value="{{#value}}" placeholder="内容文本" />
+        </div>
+
+        <div class="edit-item">
+            <div class="flex-div">
+                <span class="title">宽度</span>
+                <div class="input-div">
+                    <input class="widthInput" type="text" value="{{#width}}" placeholder="值" />px
+                </div>
+            </div>
+            <div class="flex-div">
+                <span class="title">高度</span>
+                <div class="input-div">
+                    <input class="heightInput" type="text" value="{{#height}}" placeholder="值" />px
+                </div>
+            </div>
+        </div>
+
+        <div class="edit-item">
+            <span class="title">字体</span>
+            <select>
+                <option>默认</option>
+            </select>
+        </div>
+
+
+        <div class="edit-item">
+            <span class="title">对齐方式</span>
+            <div class="textAlign-div">
+                <span data-type="left" class="bnTextAlign bn-left {{textAlign === 'left' ? 'actived' : ''}}"></span>
+                <span data-type="center" class="bnTextAlign bn-center {{textAlign === 'center' ? 'actived' : ''}}"></span>
+                <span data-type="right" class="bnTextAlign bn-right {{textAlign === 'right' ? 'actived' : ''}}"></span>
+            </div>
+        </div>
+    </div>
+</div>
