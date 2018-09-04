@@ -41,6 +41,31 @@
             </select>
         </div>
 
+        <div class="edit-item">
+            <span class="title"></span>
+                <div class="flex-div">
+                    <div class="input-div">
+                        <input class="colorPicker" type="text" />
+                    </div>
+                </div
+                <div class="flex-div">
+                    <select class="fontSizeSelect">
+                        <option value="12" selected="{{fontSize === 12 ? true: false}}">12px</option>
+                        <option value="14" selected="{{fontSize === 14 ? true: false}}">14px</option>
+                        <option value="16" selected="{{fontSize === 12 ? true: false}}">16px</option>
+                        <option value="18" selected="{{fontSize === 12 ? true: false}}">18px</option>
+                        <option value="20" selected="{{fontSize === 12 ? true: false}}">20px</option>
+                        <option value="22" selected="{{fontSize === 12 ? true: false}}">22px</option>
+                        <option value="24" selected="{{fontSize === 12 ? true: false}}">24px</option>
+                        <option value="26" selected="{{fontSize === 12 ? true: false}}">26px</option>
+                        <option value="28" selected="{{fontSize === 12 ? true: false}}">28px</option>
+                        <option value="36" selected="{{fontSize === 36 ? true: false}}">36px</option>
+                        <option value="48" selected="{{fontSize === 12 ? true: false}}">48px</option>
+                        <option value="72" selected="{{fontSize === 12 ? true: false}}">72px</option>
+                    </select>
+                </div>
+        </div>
+
 
         <div class="edit-item">
             <span class="title">对齐方式</span>

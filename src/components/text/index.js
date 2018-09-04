@@ -39,11 +39,20 @@ export default class ES_Text extends ES_Base {
     }
 
     getFontSize() {
-        return this.el.style.fontSize
+        let value = this.el.style.fontSize
+        return Number(value.substring(0, value.length - 2))
     }
 
     setFontSize(val) {
         this.el.style.fontSize = val + "px"
+    }
+
+    getColor() {
+        return this.el.style.color
+    }
+    
+    setColor(val) {
+        this.el.style.color = val
     }
 
     toObject() {
@@ -51,7 +60,8 @@ export default class ES_Text extends ES_Base {
             value: this.getText(),
             textAlign: this.getTextAlign(),
             fontFamily: this.getFontFamily(),
-            fontSize: this.getFontSize()
+            fontSize: this.getFontSize(),
+            color: this.getColor()
         })
     }
 
