@@ -1,4 +1,5 @@
 <div class="device-editor-container">
+    <div class="menu-main"></div>
     <div class="device-main"></div>
     <div class="editor-main"></div>
 </div>

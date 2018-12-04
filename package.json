@@ -18,6 +18,7 @@
     "postcss": "^6.0.9",
     "postcss-loader": "^2.0.6",
     "sass-loader": "^6.0.6",
+    "sortablejs": "^1.7.0",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"

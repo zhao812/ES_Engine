@@ -1,0 +1,11 @@
+<div class="menu-container">
+    <div class="header-title">组件列表</div>
+    <ul class="menu-list">
+        {{each list}}
+            <li data-id="{{$value.type}}">
+                <div class="img-div"></div>
+                <div class="title-txt">{{$value.name}}</div>
+            </li>
+        {{/each}}
+    </ul>
+</div>

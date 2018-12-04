@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Cache-Control" content="no-store">
     <title>Engine</title>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.6.1/Sortable.min.js"></script>
 </head>
 
 <body onload="load()">
@@ -13,30 +14,78 @@
             var engine = new esEngine("app");
             let data = [
                 {
-                    type: 1,
-                    value: "1111",
-                    value_type: 1,
-                    style: "left: 100px; right: 20px; width: 100px"
+                    type: 0,
+                    children: [
+                        [
+                            {
+                                type: 3,
+                                value: "https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2401881700,2342273471&fm=58",
+                                value_type: 1,
+                                style: 'width: 100px; height: 100px; left: 10px; top: 10px'
+                            },
+                            {
+                                name: "文本框",
+                                type: 4,
+                                value: "4444",
+                                value_type: 1,
+                                style: "left: 200px; top: 90px; width: 400px; height: 50px; font-size: 36px; color: #ff0000; text-align: center;"
+                            }
+                        ],
+                        [
+                            {
+                                type: 3,
+                                value: "https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2401881700,2342273471&fm=58",
+                                value_type: 1,
+                                style: 'width: 100px; height: 100px; left: 10px; top: 10px'
+                            },
+                            {
+                                name: "文本框",
+                                type: 4,
+                                value: "4444",
+                                value_type: 1,
+                                style: "left: 200px; top: 90px; width: 400px; height: 50px; font-size: 36px; color: #ff0000; text-align: center;"
+                            }
+                        ],
+                        [
+
+                        ]
+                    ]
                 },
                 {
-                    type: 2,
-                    value: "2222",
-                    value_type: 1,
-                    style: 'width: 100px;'
+                    type: 0,
+                    children: [
+                        [
+                            {
+                                type: 3,
+                                value: "https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2401881700,2342273471&fm=58",
+                                value_type: 1,
+                                style: 'width: 100px; height: 100px; left: 10px; top: 10px'
+                            },
+                            {
+                                name: "文本框",
+                                type: 4,
+                                value: "4444",
+                                value_type: 1,
+                                style: "left: 200px; top: 90px; width: 400px; height: 50px; font-size: 36px; color: #ff0000; text-align: center;"
+                            }
+                        ],
+                        [
+                            {
+                                type: 3,
+                                value: "https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2401881700,2342273471&fm=58",
+                                value_type: 1,
+                                style: 'width: 100px; height: 100px; left: 10px; top: 10px'
+                            },
+                            {
+                                name: "文本框",
+                                type: 4,
+                                value: "4444",
+                                value_type: 1,
+                                style: "left: 200px; top: 90px; width: 400px; height: 50px; font-size: 36px; color: #ff0000; text-align: center;"
+                            }
+                        ],
+                    ]
                 },
-                {
-                    type: 3,
-                    value: "https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2401881700,2342273471&fm=58",
-                    value_type: 1,
-                    style: 'width: 100px; height: 100px; left: 10px; top: 10px'
-                },
-                {
-                    name: "文本框",
-                    type: 4,
-                    value: "4444",
-                    value_type: 1,
-                    style: "left: 200px; top: 90px; width: 400px; height: 50px; font-size: 36px; color: #ff0000; text-align: center;"
-                }
             ]
             engine.init(data);
         }

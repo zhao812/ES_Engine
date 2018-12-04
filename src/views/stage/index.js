@@ -1,5 +1,7 @@
 import Parse from "../../parse"
 import { SCALE } from '../../config'
+import Sortable from '../../plungs/sortable'
+import DragList from '../../plungs/dragList'
 
 export default class Stage {
     constructor(dom){
@@ -13,6 +15,24 @@ export default class Stage {
         this.bgColor = "#000"
 
         this.onSelectedHandler = this._onSelectedHandler.bind(this);
+        
+        this.stageSortable = Sortable.create(this.el, {
+            group: {
+                name: "stage",
+                put: "menu"
+            },
+        }) 
+
+        // this.stageSortable = new DragList(this.el, {
+        //     dragEl: "div",
+        //     onDrop: function (event){
+        //         var { type, id } = JSON.parse(event.dataTransfer.getData("Text"));
+        //         if(id === 0 && type === "menu") {
+
+        //         }
+        //     }
+        // })
+
     }
 
     set backgroundColor(val) {
@@ -27,9 +47,9 @@ export default class Stage {
     init(data) {
         this.parse = new Parse(data)
         let elements = this.parse.getElements();
-        elements.map(element => {
-            this.el.appendChild(element.getElement())
-        })
+        // elements.map(element => {
+        //     this.el.appendChild(element.getElement())
+        // })
 
         
         this.addEvent();
